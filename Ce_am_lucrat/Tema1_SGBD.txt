@@ -1,0 +1,24 @@
+10. c) pentru ca nu este specificata valoare campului "cod_camin". Poate avea valoare null implicita sau o valoare default
+
+11. COMMENT ON TABLE employees IS 'Informaţii despre angajati'; --comentariu la tabela angajati
+
+12.     select employees, comments
+	from user_tab_comments
+	where employees = 'Informatii despre angajati';
+
+13. alter session set nls_date_format = 'DD.MM.YYYY HH24:MI:SS';
+
+14. Rulaţi următoarea cerere SQL: 
+    SELECT EXTRACT(YEAR FROM SYSDATE) 
+    FROM   dual; 
+    --se afiseaza anul curent (2024)
+
+15. SELECT EXTRACT(DAY FROM SYSDATE)   --se afiseaza ziua curenta (19)
+    FROM dual;
+
+    SELECT EXTRACT(MONTH FROM SYSDATE) --se afiseaza luna curenta (10)
+    FROM dual;
+
+16. select table_name 
+    from user_tables 
+    where table_name LIKE '%_dp';

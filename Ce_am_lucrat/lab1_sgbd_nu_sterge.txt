@@ -1,0 +1,29 @@
+select e.first_name, d.department_name
+from employees e
+left join departments d on(e.department_id = d.department_id);
+
+select d.department_id, count(*) as nr_ang_per_dept
+from employees e
+right join departments d on(e.department_id = d.department_id)
+group by d.department_id;
+
+select e.first_name, e.salary
+from employees e
+where salary >= (
+                select avg(salary)
+                from employees
+                
+);
+--toti ang din depart cu media salariala maxima
+select e.first_name
+from employees e
+where department_id in (
+select d.department_id
+from departments d
+join employees e on (e.department_id = d.department_id)
+group by d.department_id
+having avg(e.salary) = (
+    select max(avg(e.salary))
+from departments d join employees e on d.department_id = e.department_id
+group by d.department_id
+);
