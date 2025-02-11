@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 --/*
 drop table imprumuta cascade constraints;
 drop table cititor cascade constraints;
@@ -116,6 +117,8 @@ commit;
 --carti imprumutate din domeniul biologie
 --domeniul nu are carti inregistrate 
 
+=======
+>>>>>>> 08f6546b996ceb22563b22d3b708f8b32baa2fcc
 CREATE TABLE cititor_DP AS SELECT * FROM cititor;
 CREATE TABLE domeniu_DP AS SELECT * FROM domeniu;
 CREATE TABLE carte_DP AS SELECT * FROM carte;
@@ -240,6 +243,7 @@ BEGIN
 END;
 /
 
+<<<<<<< HEAD
 --6
 CREATE OR REPLACE PROCEDURE Numar_Carti_Neimprumutate
 IS
@@ -727,6 +731,8 @@ END;
 
 
 
+=======
+>>>>>>> 08f6546b996ceb22563b22d3b708f8b32baa2fcc
 --21
 CREATE OR REPLACE PROCEDURE Cititor_Detalii
 IS
